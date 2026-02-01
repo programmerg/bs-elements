@@ -1,10 +1,14 @@
-# BsElements
+<p align="center">
+  <img src="logo.svg" alt="bs-elements" width="128" height="128">
+</p>
 
-A **Bootstrap 5–based, framework-agnostic Web Component library** built around the Bootstrap philosophy: **class-first markup, minimal abstraction, and a thin DOM wrapper**.
+# bs-elements
 
-BsElements augments existing Bootstrap HTML and JavaScript with a **declarative Custom Element API** — without hiding, replacing, or reinventing Bootstrap.
+A **Bootstrap 5–based, framework-agnostic Web Component library** built around the Bootstrap philosophy: 
+_class-first markup, minimal abstraction, and a thin DOM wrapper_.
 
----
+bs-elements augments existing Bootstrap HTML and JavaScript with a **declarative Custom Element API** 
+— without hiding, replacing, or reinventing Bootstrap.
 
 ## 🎯 Goals
 
@@ -19,8 +23,6 @@ Explicitly not a goal:
 - Replacing Bootstrap CSS
 - Shadow DOM isolation
 
----
-
 ## 🚀 Getting started
 
 Good old way
@@ -34,8 +36,6 @@ ES Modules
 - Use the `<script src="bs-elements.esm.js" type="module"></script>`
 - or install it with the command: `npm i programmerg/bs-elements`
 - then you can import it as `import * from 'bs-elements'`
-
----
 
 ## 🧠 Design Principles
 
@@ -82,8 +82,6 @@ Event names are identical to Bootstrap events
 - No destructive re-rendering
 - The same HTML remains stable across updates
 
----
-
 ## 🛠️ Technical Decisions
 
 ### Custom Elements
@@ -100,8 +98,6 @@ Event names are identical to Bootstrap events
 - Bootstrap 5 JS is an internal dependency, 
  
 We wrap it — we do not reimplement it!
-
----
 
 ## 📦 Component Categories
 
@@ -125,8 +121,6 @@ Responsibilities:
 
 - Encapsulate higher-level or domain-specific behavior
 
----
-
 ## 🔁 Content Routing
 
 - Components do not render templates
@@ -146,8 +140,6 @@ If required Bootstrap structure is missing, BsElements fills the gap.
   <p>This will automatically become the modal-body</p>
 </bs-modal>
 ```
-
----
 
 ## 📡 Lifecycle
 

@@ -1,0 +1,26 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="256,128 192,240 64,240 0,128 64,16 192,16" fill="url(#bg)" filter="url(#shadow)"/>
+  <text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="120" fill="#fff" letter-spacing="-8" filter="url(#depth)">Bs</text>
+  <!-- text x="50%" y="85%" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#fff">Elements</text -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7952b3"/>
+      <stop offset="100%" stop-color="#3A99D7"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feOffset dx="0" dy="2"/>
+      <feGaussianBlur stdDeviation="6" result="offset-blur"/>
+      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"/>
+      <feFlood flood-color="#000" flood-opacity="0.25" result="color"/>
+      <feComposite operator="in" in="color" in2="inverse" result="shadow"/>
+      <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
+    </filter>
+    <filter id="depth" x="-50%" y="-50%" width="200%" height="200%">
+      <feOffset dx="0" dy="2" result="offset"/>
+      <feGaussianBlur in="offset" stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#000" flood-opacity="0.35" result="color"/>
+      <feComposite operator="in" in="color" in2="blur" result="shadow"/>
+      <feComposite operator="over" in="SourceGraphic" in2="shadow"/>
+    </filter>
+  </defs>
+</svg>
