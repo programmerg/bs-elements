@@ -1,0 +1,47 @@
+{
+  "name": "bs-elements",
+  "description": "Bootstrap 5-based, framework-agnostic Web Component library",
+  "version": "0.1.0",
+  "keywords": [
+    "bootstrap",
+    "components",
+    "web components",
+    "custom elements",
+    "html elements",
+    "ui library",
+    "ui framework"
+  ],
+  "homepage": "https://github.com/programmerg/bs-elements",
+  "author": "Gelencsér Gergő",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github:programmerg/bs-elements.git"
+  },
+  "bugs": {
+    "url": "https://github.com/programmerg/bs-elements/issues"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "files": [
+    "src/",
+    "custom-elements.json"
+  ],
+  "customElements": "custom-elements.json",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.11.0",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.57.1"
+  },
+  "scripts": {
+    "build:manifest": "npx custom-elements-manifest analyze --litelement --globs src/**/*.js",
+    "build:dist": "rollup -c",
+    "build": "npm run build:dist && npm run build:manifest"
+  }
+}
