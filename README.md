@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="logo.svg" alt="bs-elements" width="128" height="128">
+  <img src="https://programmerg.github.io/bs-elements/logo.svg" alt="bs-elements" width="128" height="128">
 </p>
 
 # bs-elements
 
-A **Bootstrap 5–based, framework-agnostic Web Component library** built around the Bootstrap philosophy: 
+A **Bootstrap 5–based, framework-agnostic Web Component library** built around the Bootstrap philosophy:<br>
 _class-first markup, minimal abstraction, and a thin DOM wrapper_.
 
-bs-elements augments existing Bootstrap HTML and JavaScript with a **declarative Custom Element API** 
+bs-elements augments existing Bootstrap HTML and JavaScript with a **declarative Custom Element API**<br>
 — without hiding, replacing, or reinventing Bootstrap.
 
 ## 🎯 Goals
@@ -28,14 +28,21 @@ Explicitly not a goal:
 Good old way
 
 1. Follow the [official guide](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
-2. replace `bootstrap.boundle.min.js` with `bs-elements.boundle.min.js`
-3. or add the `<script src="bs-elements.min.js"></script>` next to it
+2. replace `bootstrap.boundle.min.js` with our `bs-elements.boundle.min.js`<br>
+  or keep it and add `bs-elements.min.js` next to it.
+
+CDN links
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.boundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.esm.js" type="module"></script>
+```
 
 ES Modules
 
-- Use the `<script src="bs-elements.esm.js" type="module"></script>`
-- or install it with the command: `npm i programmerg/bs-elements`
-- then you can import it as `import * from 'bs-elements'`
+- Run the `npm i @programmerg/bs-elements` command
+- and use `import * from '@programmerg/bs-elements'` 
 
 ## 🧠 Design Principles
 
@@ -146,3 +153,7 @@ If required Bootstrap structure is missing, BsElements fills the gap.
 - `connectedCallback` → initialize Bootstrap instance
 - Attribute changes → synchronize options
 - `disconnectedCallback` → clean up
+
+---
+
+<p align="center">Made with ❤️, HTML and JS.</p>

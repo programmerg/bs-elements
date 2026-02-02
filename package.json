@@ -1,5 +1,5 @@
 {
-  "name": "bs-elements",
+  "name": "@programmerg/bs-elements",
   "description": "Bootstrap 5-based, framework-agnostic Web Component library",
   "version": "0.1.0",
   "keywords": [
@@ -11,12 +11,12 @@
     "ui library",
     "ui framework"
   ],
-  "homepage": "https://github.com/programmerg/bs-elements",
+  "homepage": "https://programmerg.github.io/bs-elements",
   "author": "Gelencsér Gergő",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github:programmerg/bs-elements.git"
+    "url": "git+https://github.com/programmerg/bs-elements.git"
   },
   "bugs": {
     "url": "https://github.com/programmerg/bs-elements/issues"
@@ -25,6 +25,7 @@
   "main": "src/index.js",
   "module": "src/index.js",
   "files": [
+    "dist/",
     "src/",
     "custom-elements.json"
   ],
@@ -42,6 +43,8 @@
   "scripts": {
     "build:manifest": "npx custom-elements-manifest analyze --litelement --globs src/**/*.js",
     "build:dist": "rollup -c",
-    "build": "npm run build:dist && npm run build:manifest"
+    "build": "npm run build:dist && npm run build:manifest",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm publish --access public"
   }
 }

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>bs-elements · Bootstrap 5-based, framework-agnostic Web Component library</title>
     <link rel="icon" href="logo.svg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
     <style>
       .nav-toc nav ul {
           padding-left: 0;
@@ -35,10 +36,10 @@
       }
     </style>
   </head>
-  <body data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -50%" data-bs-smooth-scroll="true">
+  <body data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -30%" data-bs-smooth-scroll="true">
     <div class="container">
       <div class="row">
-        <div class="col-3">
+        <div class="col-12 col-lg-3">
           
           <nav id="toc" class="flex-column align-items-stretch pe-4 border-end position-sticky top-0 nav-toc py-5">
             <p class="text-center"><img src="logo.svg" width="64" height="64" alt="bs-elements"></p>
@@ -63,7 +64,7 @@
           </nav>
           
         </div>
-        <div class="col-9 py-5">
+        <div class="col-12 col-lg-9 py-5">
 
           <div class="mb-5">
             <p>A <strong>Bootstrap 5-based, framework-agnostic Web Component library</strong> built around the Bootstrap philosophy:<br><em>class-first markup, minimal abstraction, and a thin DOM wrapper.</em></p>
@@ -72,178 +73,239 @@
 
           <h2 id="base" class="mb-5">Base components</h2>
 
-          <section id="accordion" class="card p-3 mb-5">
-            <h3>bs-accordion</h3>
-            <bs-accordion class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Item #1
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    Body 1
+          <section id="accordion" class="card mb-5">
+            <div class="card-header bg-transparent border-0 p-3">
+              <h3>bs-accordion</h3>
+            </div>
+            <div class="card-body p-3 mb-3">
+              <bs-accordion class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Item #1
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Body 1
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <button class="accordion-button collapsed">Item #2</button>
-                <div class="accordion-collapse collapse">Body 2</div>
-              </div>
-              <div class="accordion-item">
-                <bs-button class="accordion-button collapsed">Item #3</bs-button>
-                <bs-collapse class="accordion-collapse collapse">Body 3</bs-collapse>
-              </div>
-            </bs-accordion>
+                <div class="accordion-item">
+                  <button class="accordion-button collapsed">Item #2</button>
+                  <div class="accordion-collapse collapse">Body 2</div>
+                </div>
+                <div class="accordion-item">
+                  <bs-button class="accordion-button collapsed">Item #3</bs-button>
+                  <bs-collapse class="accordion-collapse collapse">Body 3</bs-collapse>
+                </div>
+              </bs-accordion>
+            </div>
+            <div class="card-footer text-body-secondary p-3"></div>
           </section>
 
-          <section id="alert" class="card p-3 mb-5">
-            <h3>bs-alert</h3>
-            <bs-alert class="alert">This is an alert</bs-alert>
+          <section id="alert" class="card mb-5">
+            <div class="card-header bg-transparent border-0 p-3">
+              <h3>bs-alert</h3>
+            </div>
+            <div class="card-body p-3 mb-3">
+              <bs-alert class="alert w-100">This is an alert</bs-alert>
+            </div>
+            <div class="card-footer text-body-secondary p-3"></div>
           </section>
 
-          <section id="button" class="card p-3 mb-5">
-            <h3>bs-button</h3>
-            <bs-button class="btn" color="primary">Button</bs-button>
+          <section id="button" class="card mb-5">
+            <div class="card-header bg-transparent border-0 p-3">
+              <h3>bs-button</h3>
+            </div>
+            <div class="card-body p-3 mb-3">
+              <p><bs-button class="btn" color="primary">Button</bs-button></p>
+            </div>
+            <div class="card-footer text-body-secondary p-3"></div>
           </section>
 
-          <section id="carousel" class="card p-3 mb-5">
-            <h3>bs-carousel</h3>
-            <bs-carousel id="carouselExampleCaptions" class="carousel slide">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <svg aria-label="Placeholder: First slide" class="d-block w-100" height="400" preserveAspectRatio="xMidYMid slice" role="img" width="800" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+          <section id="carousel" class="card mb-5">
+            <div class="card-header bg-transparent border-0 p-3">
+              <h3>bs-carousel</h3>
+            </div>
+            <div class="card-body p-3 mb-3">
+              <bs-carousel id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <svg aria-label="Placeholder: First slide" class="d-block w-100" height="400" preserveAspectRatio="xMidYMid slice" role="img" width="800" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <svg aria-label="Placeholder: First slide" class="d-block w-100" height="400" preserveAspectRatio="xMidYMid slice" role="img" width="800" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Second slide</text></svg>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <svg aria-label="Placeholder: First slide" class="d-block w-100" height="400" preserveAspectRatio="xMidYMid slice" role="img" width="800" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Thrid slide</text></svg>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <svg aria-label="Placeholder: First slide" class="d-block w-100" height="400" preserveAspectRatio="xMidYMid slice" role="img" width="800" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Second slide</text></svg>
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                  </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </bs-carousel>
+            </div>
+            <div class="card-footer text-body-secondary p-3"></div>
+          </section>
+
+          <section id="collapse" class="card mb-5">
+            <div class="card-header bg-transparent border-0 p-3">
+              <h3>bs-collapse</h3>
+            </div>
+            <div class="card-body p-3 mb-3">
+              <p><bs-button class="btn" color="primary" data-bs-toggle="collapse" data-bs-target="#demoCollapse">Toggle collapse</bs-button></p>
+              <bs-collapse class="collapse" id="demoCollapse">
+                <div class="card card-body">Collapsed content</div>
+              </bs-collapse>
+            </div>
+            <div class="card-footer text-body-secondary p-3"></div>
+          </section>
+
+          <section id="dropdown" class="card mb-5">
+            <div class="card-header bg-transparent border-0 p-3">
+              <h3>bs-dropdown</h3>
+            </div>
+            <div class="card-body p-3 mb-3">
+              <bs-dropdown class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle">Dropdown toggle</button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else</a>
                 </div>
-                <div class="carousel-item">
-                  <svg aria-label="Placeholder: First slide" class="d-block w-100" height="400" preserveAspectRatio="xMidYMid slice" role="img" width="800" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Thrid slide</text></svg>
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                  </div>
+              </bs-dropdown>
+            </div>
+            <div class="card-footer text-body-secondary p-3"></div>
+          </section>
+
+          <section id="modal" class="card mb-5">
+            <div class="card-header bg-transparent border-0 p-3">
+              <h3>bs-modal</h3>
+            </div>
+            <div class="card-body p-3 mb-3">
+              <bs-button class="btn" color="primary" data-bs-toggle="modal" data-bs-target="#demoModal">Open modal</bs-button>
+              <bs-modal class="modal" id="demoModal">
+                <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
                 </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </bs-carousel>
+                <div class="modal-body">
+                  <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </bs-modal>
+            </div>
+            <div class="card-footer text-body-secondary p-3"></div>
           </section>
 
-          <section id="collapse" class="card p-3 mb-5">
-            <h3>bs-collapse</h3>
-            <p>
-              <bs-button class="btn" toggle="collapse" target="#demoCollapse">Toggle collapse</bs-button>
-            </p>
-            <bs-collapse class="collapse" id="demoCollapse">
-              <div class="card card-body">Collapsed content</div>
-            </bs-collapse>
-          </section>
-
-          <section id="dropdown" class="card p-3 mb-5">
-            <h3>bs-dropdown</h3>
-            <bs-dropdown class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle">Dropdown toggle</button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else</a>
-              </div>
-            </bs-dropdown>
-          </section>
-
-          <section id="modal" class="card p-3 mb-5">
-            <h3>bs-modal</h3>
-            <bs-button class="btn" toggle="modal" target="#demoModal">Open modal</bs-button>
-            <bs-modal class="modal" id="demoModal">
-              <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-              </div>
-              <div class="modal-body">
+          <section id="offcanvas" class="card mb-5">
+            <div class="card-header bg-transparent border-0 p-3">
+              <h3>bs-offcanvas</h3>
+            </div>
+            <div class="card-body p-3 mb-3">
+              <bs-button class="btn" color="primary" data-bs-toggle="offcanvas" data-bs-target="#demoOffcanvas">Open offcanvas</bs-button>
+              <bs-offcanvas class="offcanvas" id="demoOffcanvas" header="Title">
                 <p>Modal body text goes here.</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </bs-modal>
+              </bs-offcanvas>
+            </div>
+            <div class="card-footer text-body-secondary p-3"></div>
           </section>
 
-          <section id="offcanvas" class="card p-3 mb-5">
-            <h3>bs-offcanvas</h3>
-            <bs-button class="btn" toggle="offcanvas" target="#demoOffcanvas">Open offcanvas</bs-button>
-            <bs-offcanvas class="offcanvas" id="demoOffcanvas" header="Title">
-              <p>Modal body text goes here.</p>
-            </bs-offcanvas>
-          </section>
-
-          <section id="popover" class="card p-3 mb-5">
-            <h3>bs-popover</h3>
-            <bs-popover class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here’s some amazing content. It’s very engaging. Right?">Click to toggle popover</bs-popover>
+          <section id="popover" class="card mb-5">
+            <div class="card-header bg-transparent border-0 p-3">
+              <h3>bs-popover</h3>
+            </div>
+            <div class="card-body p-3 mb-3">
+              <bs-popover class="btn" color="primary" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here’s some amazing content. It’s very engaging. Right?">Click to toggle popover</bs-popover>
+            </div>
+            <div class="card-footer text-body-secondary p-3"></div>
           </section>
 
           <!-- scrollspy -->
            
-          <section id="tabs" class="card p-3 mb-5">
-            <h3>bs-tabs</h3>
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
-              </li>
-            </ul>
-            <div class="tab-content">
-              <bs-tab class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">First tab</bs-tab>
-              <bs-tab class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">Second tab</bs-tab>
-              <bs-tab class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">Thrid tab</bs-tab>
-              <bs-tab class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">Disabled tab</bs-tab>
+          <section id="tabs" class="card mb-5">
+            <div class="card-header bg-transparent border-0 p-3">
+              <h3>bs-tabs</h3>
             </div>
+            <div class="card-body p-3 mb-3">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <bs-tab class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">First tab</bs-tab>
+                <bs-tab class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">Second tab</bs-tab>
+                <bs-tab class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">Thrid tab</bs-tab>
+                <bs-tab class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">Disabled tab</bs-tab>
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary p-3"></div>
           </section>
 
-          <section id="toast" class="card p-3 mb-5">
-            <h3>bs-toast</h3>
-            <bs-toast class="toast" header="Bootstrap" dismissible>Hello, world! This is a toast message.</bs-toast>
+          <section id="toast" class="card mb-5">
+            <div class="card-header bg-transparent border-0 p-3">
+              <h3>bs-toast</h3>
+            </div>
+            <div class="card-body p-3 mb-3">
+              <bs-toast class="toast" header="Bootstrap" dismissible>Hello, world! This is a toast message.</bs-toast>
+            </div>
+            <div class="card-footer text-body-secondary p-3"></div>
           </section>
 
-          <section id="tooltip" class="card p-3 mb-5">
-            <h3>bs-tooltip</h3>
-            <bs-tooltip class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">Tooltip on top</bs-tooltip>
+          <section id="tooltip" class="card mb-5">
+            <div class="card-header bg-transparent border-0 p-3">
+              <h3>bs-tooltip</h3>
+            </div>
+            <div class="card-body p-3 mb-3">
+              <bs-tooltip class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">Tooltip on top</bs-tooltip>
+            </div>
+            <div class="card-footer text-body-secondary p-3"></div>
           </section>
-
+          
+          <p class="text-center">Made with ❤️, HTML and JS.</p>
         </div>
       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="dist/bs-elements.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/html.min.js"></script>
     <!-- script type="importmap">
       {
         "imports": {
@@ -253,5 +315,16 @@
       }
     </script -->
     <!-- script src="src/index.js" type="module"></script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('section.card').forEach(card => {
+          const body = card.querySelector('.card-body');
+          const footer = card.querySelector('.card-footer');
+          const code = body.innerHTML.trim().replace('              ', '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+          footer.insertAdjacentHTML("beforeend", `<pre class="m-0"><code class="language-html">${code}</code></pre>`);
+        });
+        hljs.highlightAll();
+      });
+    </script>
   </body>
 </html>
