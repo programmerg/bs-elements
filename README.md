@@ -32,7 +32,7 @@ Use it with vanilla JS or any framework you like.
     </bs-modal>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.1/dist/bs-elements.min.js"></script>
   </body>
 </html>
 ```
@@ -46,9 +46,9 @@ We have different type of builds:
 CDN links
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.boundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.esm.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.1/dist/bs-elements.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.1/dist/bs-elements.boundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.1/dist/bs-elements.esm.js" type="module"></script>
 ```
 
 Package managers
