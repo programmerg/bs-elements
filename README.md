@@ -4,11 +4,57 @@
 
 # bs-elements
 
-A **Bootstrap 5–based, framework-agnostic Web Component library** built around the Bootstrap philosophy:<br>
-_class-first markup, minimal abstraction, and a thin DOM wrapper_.
+bs-elements is a **framework-agnostic Web Component library** built around the Bootstrap philosophy.
 
-bs-elements augments existing Bootstrap HTML and JavaScript with a **declarative Custom Element API**<br>
-— without hiding, replacing, or reinventing Bootstrap.
+The same HTML markup, styles, JavaScript API, and events you already know, just wrapped in a **declarative Custom Element API** — without hiding, replacing, or reinventing anything. It feels more natural, composable, and built for modern development.
+
+Use it with vanilla JS or any framework you like.
+
+## ℹ️ How it works?
+
+1. Place `bs-elements.min.js` script at the bottom of your [Bootstrap 5](https://getbootstrap.com/docs/5.3/getting-started/introduction/) page.
+2. Use our custom elements e.g. `<bs-modal>` instead of generic `<div>` elements.
+3. Skip the boilerplate parts if you want and enjoy reactivity! ✨
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+  
+    <bs-modal class="modal" data-bs-backdrop="static" header="Modal title" dismissible open>
+      <p>Modal body text goes here.</p>
+    </bs-modal>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.min.js"></script>
+  </body>
+</html>
+```
+
+We have different type of builds:
+
+- `.min.js` - standalone, minimized
+- `.boundle.min.js` - this also includes the bootstrap boundle
+- `.esm.js` - ES Module version
+
+CDN links
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.boundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.esm.js" type="module"></script>
+```
+
+Package managers
+
+- `npm install @programmerg/bs-elements`
+- `import BsElements from '@programmerg/bs-elements'` 
 
 ## 🎯 Goals
 
@@ -20,29 +66,7 @@ bs-elements augments existing Bootstrap HTML and JavaScript with a **declarative
 Explicitly not a goal:
 
 - Inventing a new design system
-- Replacing Bootstrap CSS
-- Shadow DOM isolation
-
-## 🚀 Getting started
-
-Good old way
-
-1. Follow the [official guide](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
-2. replace `bootstrap.boundle.min.js` with our `bs-elements.boundle.min.js`<br>
-  or keep it and add `bs-elements.min.js` next to it.
-
-CDN links
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.boundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@programmerg/bs-elements@0.1.0/dist/bs-elements.esm.js" type="module"></script>
-```
-
-ES Modules
-
-- Run the `npm i @programmerg/bs-elements` command
-- and use `import * from '@programmerg/bs-elements'` 
+- Replacing Bootstrap CSS and JS
 
 ## 🧠 Design Principles
 
@@ -139,7 +163,7 @@ Responsibilities:
 
 **Auto boilerplate generation**
 
-If required Bootstrap structure is missing, BsElements fills the gap.
+If required Bootstrap structure is missing, bs-elements fills the gap.
 
 ```html
 <bs-modal>
